@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		900EE2471B3FB84A00DDF0B1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900EE2461B3FB84A00DDF0B1 /* Media.xcassets */; };
+		900EE2CC1B440ED600DDF0B1 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF1B711B193C5100D41FE8 /* CalculatorTests.swift */; };
 		906DD4F61B3AABB100E3D8C9 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906DD4F51B3AABB100E3D8C9 /* SettingsTableViewController.swift */; };
 		90AC12891B1C75670006627E /* AxesDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AC12881B1C75670006627E /* AxesDrawer.swift */; };
 		90AC128B1B1C79D20006627E /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AC128A1B1C79D20006627E /* GraphViewController.swift */; };
 		90AC128D1B1C82520006627E /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AC128C1B1C82520006627E /* GraphView.swift */; };
+		90DEFDFD1B48A3A000FF5180 /* PasteboardLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DEFDFC1B48A3A000FF5180 /* PasteboardLabel.swift */; };
 		90F860C31B3D680A0065EADD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F860C21B3D680A0065EADD /* Settings.swift */; };
 		90F860C91B3ECF1D0065EADD /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F860C81B3ECF1D0065EADD /* AboutViewController.swift */; };
 		90F920281B30D97800B89C06 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F920271B30D97800B89C06 /* StatsViewController.swift */; };
@@ -22,7 +25,6 @@
 		90FF1B661B193C5100D41FE8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90FF1B641B193C5100D41FE8 /* LaunchScreen.xib */; };
 		90FF1B7C1B195B9900D41FE8 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF1B7B1B195B9900D41FE8 /* CalculatorBrain.swift */; };
 		90FF1B811B1B16E900D41FE8 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF1B7B1B195B9900D41FE8 /* CalculatorBrain.swift */; };
-		90FF1B831B1B170400D41FE8 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF1B711B193C5100D41FE8 /* CalculatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,22 +38,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		900EE2461B3FB84A00DDF0B1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = ../Media.xcassets; sourceTree = "<group>"; };
 		906DD4F51B3AABB100E3D8C9 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		90AC12881B1C75670006627E /* AxesDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesDrawer.swift; sourceTree = "<group>"; };
 		90AC128A1B1C79D20006627E /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		90AC128C1B1C82520006627E /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		90DEFDFC1B48A3A000FF5180 /* PasteboardLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardLabel.swift; sourceTree = "<group>"; };
 		90F860C21B3D680A0065EADD /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		90F860C81B3ECF1D0065EADD /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		90F920271B30D97800B89C06 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		90F920291B315F6400B89C06 /* GlobalSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSplitViewController.swift; sourceTree = "<group>"; };
-		90FF1B561B193C5100D41FE8 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90FF1B561B193C5100D41FE8 /* RPN Graph Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPN Graph Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90FF1B5A1B193C5100D41FE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90FF1B5B1B193C5100D41FE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90FF1B5D1B193C5100D41FE8 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		90FF1B601B193C5100D41FE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90FF1B621B193C5100D41FE8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		90FF1B651B193C5100D41FE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		90FF1B6B1B193C5100D41FE8 /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90FF1B6B1B193C5100D41FE8 /* RPN Graph CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RPN Graph CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90FF1B701B193C5100D41FE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90FF1B711B193C5100D41FE8 /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 		90FF1B7B1B195B9900D41FE8 /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
@@ -87,8 +91,8 @@
 		90FF1B571B193C5100D41FE8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				90FF1B561B193C5100D41FE8 /* Calculator.app */,
-				90FF1B6B1B193C5100D41FE8 /* CalculatorTests.xctest */,
+				90FF1B561B193C5100D41FE8 /* RPN Graph Calculator.app */,
+				90FF1B6B1B193C5100D41FE8 /* RPN Graph CalculatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +103,7 @@
 				90AC12881B1C75670006627E /* AxesDrawer.swift */,
 				90FF1B7B1B195B9900D41FE8 /* CalculatorBrain.swift */,
 				90FF1B5D1B193C5100D41FE8 /* CalculatorViewController.swift */,
+				90DEFDFC1B48A3A000FF5180 /* PasteboardLabel.swift */,
 				90F860C21B3D680A0065EADD /* Settings.swift */,
 				90FF1B5F1B193C5100D41FE8 /* Main.storyboard */,
 				90F860C81B3ECF1D0065EADD /* AboutViewController.swift */,
@@ -108,6 +113,7 @@
 				90AC128A1B1C79D20006627E /* GraphViewController.swift */,
 				90F920291B315F6400B89C06 /* GlobalSplitViewController.swift */,
 				90FF1B621B193C5100D41FE8 /* Images.xcassets */,
+				900EE2461B3FB84A00DDF0B1 /* Media.xcassets */,
 				90FF1B591B193C5100D41FE8 /* Supporting Files */,
 			);
 			path = Calculator;
@@ -143,9 +149,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		90FF1B551B193C5100D41FE8 /* Calculator */ = {
+		90FF1B551B193C5100D41FE8 /* RPN Graph Calculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 90FF1B751B193C5100D41FE8 /* Build configuration list for PBXNativeTarget "Calculator" */;
+			buildConfigurationList = 90FF1B751B193C5100D41FE8 /* Build configuration list for PBXNativeTarget "RPN Graph Calculator" */;
 			buildPhases = (
 				90FF1B521B193C5100D41FE8 /* Sources */,
 				90FF1B531B193C5100D41FE8 /* Frameworks */,
@@ -155,14 +161,14 @@
 			);
 			dependencies = (
 			);
-			name = Calculator;
+			name = "RPN Graph Calculator";
 			productName = Calculator;
-			productReference = 90FF1B561B193C5100D41FE8 /* Calculator.app */;
+			productReference = 90FF1B561B193C5100D41FE8 /* RPN Graph Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
-		90FF1B6A1B193C5100D41FE8 /* CalculatorTests */ = {
+		90FF1B6A1B193C5100D41FE8 /* RPN Graph CalculatorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 90FF1B781B193C5100D41FE8 /* Build configuration list for PBXNativeTarget "CalculatorTests" */;
+			buildConfigurationList = 90FF1B781B193C5100D41FE8 /* Build configuration list for PBXNativeTarget "RPN Graph CalculatorTests" */;
 			buildPhases = (
 				90FF1B671B193C5100D41FE8 /* Sources */,
 				90FF1B681B193C5100D41FE8 /* Frameworks */,
@@ -173,9 +179,9 @@
 			dependencies = (
 				90FF1B6D1B193C5100D41FE8 /* PBXTargetDependency */,
 			);
-			name = CalculatorTests;
+			name = "RPN Graph CalculatorTests";
 			productName = CalculatorTests;
-			productReference = 90FF1B6B1B193C5100D41FE8 /* CalculatorTests.xctest */;
+			productReference = 90FF1B6B1B193C5100D41FE8 /* RPN Graph CalculatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -189,6 +195,12 @@
 				TargetAttributes = {
 					90FF1B551B193C5100D41FE8 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = H3KN9H3ZWN;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					90FF1B6A1B193C5100D41FE8 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -196,7 +208,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 90FF1B511B193C5100D41FE8 /* Build configuration list for PBXProject "Calculator" */;
+			buildConfigurationList = 90FF1B511B193C5100D41FE8 /* Build configuration list for PBXProject "RPN Graph Calculator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -209,8 +221,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				90FF1B551B193C5100D41FE8 /* Calculator */,
-				90FF1B6A1B193C5100D41FE8 /* CalculatorTests */,
+				90FF1B551B193C5100D41FE8 /* RPN Graph Calculator */,
+				90FF1B6A1B193C5100D41FE8 /* RPN Graph CalculatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -222,6 +234,7 @@
 			files = (
 				90FF1B611B193C5100D41FE8 /* Main.storyboard in Resources */,
 				90FF1B661B193C5100D41FE8 /* LaunchScreen.xib in Resources */,
+				900EE2471B3FB84A00DDF0B1 /* Media.xcassets in Resources */,
 				90FF1B631B193C5100D41FE8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90FF1B7C1B195B9900D41FE8 /* CalculatorBrain.swift in Sources */,
+				90DEFDFD1B48A3A000FF5180 /* PasteboardLabel.swift in Sources */,
 				90AC128B1B1C79D20006627E /* GraphViewController.swift in Sources */,
 				90F860C91B3ECF1D0065EADD /* AboutViewController.swift in Sources */,
 				90AC12891B1C75670006627E /* AxesDrawer.swift in Sources */,
@@ -259,7 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90FF1B811B1B16E900D41FE8 /* CalculatorBrain.swift in Sources */,
-				90FF1B831B1B170400D41FE8 /* CalculatorTests.swift in Sources */,
+				900EE2CC1B440ED600DDF0B1 /* CalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +282,7 @@
 /* Begin PBXTargetDependency section */
 		90FF1B6D1B193C5100D41FE8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 90FF1B551B193C5100D41FE8 /* Calculator */;
+			target = 90FF1B551B193C5100D41FE8 /* RPN Graph Calculator */;
 			targetProxy = 90FF1B6C1B193C5100D41FE8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -380,9 +394,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -390,9 +408,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -410,8 +432,8 @@
 				);
 				INFOPLIST_FILE = CalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calculator.app/Calculator";
+				PRODUCT_NAME = "RPN Graph CalculatorTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPN Graph Calculator.app/RPN Graph Calculator";
 			};
 			name = Debug;
 		};
@@ -425,15 +447,15 @@
 				);
 				INFOPLIST_FILE = CalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calculator.app/Calculator";
+				PRODUCT_NAME = "RPN Graph CalculatorTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPN Graph Calculator.app/RPN Graph Calculator";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		90FF1B511B193C5100D41FE8 /* Build configuration list for PBXProject "Calculator" */ = {
+		90FF1B511B193C5100D41FE8 /* Build configuration list for PBXProject "RPN Graph Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				90FF1B731B193C5100D41FE8 /* Debug */,
@@ -442,7 +464,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		90FF1B751B193C5100D41FE8 /* Build configuration list for PBXNativeTarget "Calculator" */ = {
+		90FF1B751B193C5100D41FE8 /* Build configuration list for PBXNativeTarget "RPN Graph Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				90FF1B761B193C5100D41FE8 /* Debug */,
@@ -451,7 +473,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		90FF1B781B193C5100D41FE8 /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
+		90FF1B781B193C5100D41FE8 /* Build configuration list for PBXNativeTarget "RPN Graph CalculatorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				90FF1B791B193C5100D41FE8 /* Debug */,

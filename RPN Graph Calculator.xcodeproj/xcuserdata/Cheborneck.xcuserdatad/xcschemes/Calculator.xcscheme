@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "90FF1B551B193C5100D41FE8"
-               BuildableName = "Calculator.app"
-               BlueprintName = "Calculator"
-               ReferencedContainer = "container:Calculator.xcodeproj">
+               BuildableName = "RPN Graph Calculator.app"
+               BlueprintName = "RPN Graph Calculator"
+               ReferencedContainer = "container:RPN Graph Calculator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "90FF1B6A1B193C5100D41FE8"
-               BuildableName = "CalculatorTests.xctest"
-               BlueprintName = "CalculatorTests"
-               ReferencedContainer = "container:Calculator.xcodeproj">
+               BuildableName = "RPN Graph CalculatorTests.xctest"
+               BlueprintName = "RPN Graph CalculatorTests"
+               ReferencedContainer = "container:RPN Graph Calculator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "90FF1B6A1B193C5100D41FE8"
-               BuildableName = "CalculatorTests.xctest"
-               BlueprintName = "CalculatorTests"
-               ReferencedContainer = "container:Calculator.xcodeproj">
+               BuildableName = "RPN Graph CalculatorTests.xctest"
+               BlueprintName = "RPN Graph CalculatorTests"
+               ReferencedContainer = "container:RPN Graph Calculator.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "90FF1B551B193C5100D41FE8"
-            BuildableName = "Calculator.app"
-            BlueprintName = "Calculator"
-            ReferencedContainer = "container:Calculator.xcodeproj">
+            BuildableName = "RPN Graph Calculator.app"
+            BlueprintName = "RPN Graph Calculator"
+            ReferencedContainer = "container:RPN Graph Calculator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "90FF1B551B193C5100D41FE8"
-            BuildableName = "Calculator.app"
-            BlueprintName = "Calculator"
-            ReferencedContainer = "container:Calculator.xcodeproj">
+            BuildableName = "RPN Graph Calculator.app"
+            BlueprintName = "RPN Graph Calculator"
+            ReferencedContainer = "container:RPN Graph Calculator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "90FF1B551B193C5100D41FE8"
-            BuildableName = "Calculator.app"
-            BlueprintName = "Calculator"
-            ReferencedContainer = "container:Calculator.xcodeproj">
+            BuildableName = "RPN Graph Calculator.app"
+            BlueprintName = "RPN Graph Calculator"
+            ReferencedContainer = "container:RPN Graph Calculator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

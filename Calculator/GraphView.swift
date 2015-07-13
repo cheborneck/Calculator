@@ -53,6 +53,8 @@ class GraphView: UIView {
             origin = originHelper
         }
 
+//        self.clearsContextBeforeDrawing = false
+        
         AxesDrawer(contentScaleFactor: contentScaleFactor).drawAxesInRect(bounds, origin: origin, pointsPerUnit: scale)
         color.set()
         let path = UIBezierPath()
@@ -81,6 +83,8 @@ class GraphView: UIView {
         }
         path.stroke()
     }
+    
+    // MARK: Gestures
     
     internal func zoom(gesture: UIPinchGestureRecognizer) {
         if gesture.state == .Changed {

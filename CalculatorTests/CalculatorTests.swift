@@ -76,10 +76,10 @@ class CalculatorTests: XCTestCase {
         // √(10) + 3 -> √10 + 3
         brain = CalculatorBrain()
         XCTAssertEqual(brain.pushOperand(10)!, 10)
-        XCTAssertTrue(brain.performOperation("√")! - 3.162 < 0.1)
+        XCTAssertTrue(brain.performOperation("sqrt")! - 3.162 < 0.1)
         XCTAssertEqual(brain.pushOperand(3)!, 3)
         XCTAssertTrue(brain.performOperation("+")! - 6.162 < 0.1)
-        XCTAssertEqual(brain.description, "√(10) + 3")
+        XCTAssertEqual(brain.description, "sqrt(10) + 3")
         //        XCTAssertEqual(brain.description, "√10 + 3")
         
         // √(3 + 5)
@@ -87,8 +87,8 @@ class CalculatorTests: XCTestCase {
         XCTAssertEqual(brain.pushOperand(3)!, 3)
         XCTAssertEqual(brain.pushOperand(5)!, 5)
         XCTAssertEqual(brain.performOperation("+")!, 8)
-        XCTAssertTrue(brain.performOperation("√")! - 2.828 < 0.1)
-        XCTAssertEqual(brain.description, "√(3 + 5)")
+        XCTAssertTrue(brain.performOperation("sqrt")! - 2.828 < 0.1)
+        XCTAssertEqual(brain.description, "sqrt(3 + 5)")
         
         // 3 + (5 + 4) -> 3 + 5 + 4
         brain = CalculatorBrain()
@@ -104,12 +104,12 @@ class CalculatorTests: XCTestCase {
         brain = CalculatorBrain()
         XCTAssertEqual(brain.pushOperand(3)!, 3)
         XCTAssertEqual(brain.pushOperand(5)!, 5)
-        XCTAssertTrue(brain.performOperation("√")! - 2.236 < 0.1)
+        XCTAssertTrue(brain.performOperation("sqrt")! - 2.236 < 0.1)
         XCTAssertTrue(brain.performOperation("+")! - 5.236 < 0.1)
-        XCTAssertTrue(brain.performOperation("√")! - 2.288 < 0.1)
+        XCTAssertTrue(brain.performOperation("sqrt")! - 2.288 < 0.1)
         XCTAssertEqual(brain.pushOperand(6)!, 6)
         XCTAssertTrue(brain.performOperation("÷")! - 0.381 < 0.1)
-        XCTAssertEqual(brain.description, "√(3 + √(5)) ÷ 6")
+        XCTAssertEqual(brain.description, "sqrt(3 + sqrt(5)) ÷ 6")
         //        XCTAssertEqual(brain.description, "√(3 + √5) ÷ 6")
         
         // ? + 3
@@ -123,10 +123,10 @@ class CalculatorTests: XCTestCase {
         XCTAssertEqual(brain.pushOperand(3)!, 3)
         XCTAssertEqual(brain.pushOperand(5)!, 5)
         XCTAssertEqual(brain.performOperation("+")!, 8)
-        XCTAssertTrue(brain.performOperation("√")! - 2.828 < 0.1)
+        XCTAssertTrue(brain.performOperation("sqrt")! - 2.828 < 0.1)
         XCTAssertEqual(brain.performOperation("π")!, M_PI)
         XCTAssertEqual(brain.performOperation("cos")!, -1)
-        XCTAssertEqual(brain.description, "√(3 + 5), cos(π)")
+        XCTAssertEqual(brain.description, "sqrt(3 + 5), cos(π)")
         //        XCTAssertEqual(brain.description, "√(3 + 5), cosπ")
         
         // 3 * (5 + 4)

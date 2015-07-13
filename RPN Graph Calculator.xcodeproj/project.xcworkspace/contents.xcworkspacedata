@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Calculator.xcodeproj">
+      location = "self:/Users/Cheborneck/Developer/Calculator/RPN Graph Calculator.xcodeproj">
    </FileRef>
 </Workspace>

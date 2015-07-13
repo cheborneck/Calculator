@@ -8,11 +8,10 @@
 
 import UIKit
 import AVFoundation
-import QuartzCore
 
 class CalculatorViewController: UIViewController, SettingsTableViewControllerDelegate {
     
-    @IBOutlet weak var display: UILabel!
+    @IBOutlet weak var display: PasteboardLabel!
     
     @IBOutlet weak var history: UILabel!
     
@@ -36,6 +35,43 @@ class CalculatorViewController: UIViewController, SettingsTableViewControllerDel
         if settings.keyAlert { AudioServicesPlaySystemSound(systemSoundID) }
     }
     
+    /*
+    Used for copy/paste operations
+    */
+    @IBAction func longPressGestureRecognizer(sender: UILongPressGestureRecognizer)
+    {
+        if sender.state == UIGestureRecognizerState.Began {
+            // make the display view the FirstResponder
+            sender.view?.becomeFirstResponder()
+            // get the global menu-controller instance
+            var menuController = UIMenuController.sharedMenuController()
+            // get the location of the touch
+            let touchPoint = sender.locationInView(sender.view)
+            // and offset it a bit
+            let touchSize = CGSize(width: 100, height: 100)
+            let selectionRect = CGRect(origin: CGPoint(x: touchPoint.x-100, y: touchPoint.y), size: touchSize)
+            // set the target location to display the menu
+            menuController.setTargetRect(selectionRect, inView: sender.view!.superview!)
+            // display the menu
+            menuController.setMenuVisible(true, animated: true)
+            if menuController.menuVisible == true {
+                // if there's a menu then dim the view
+                UIView.animateWithDuration(0.5, animations: { self.display.alpha = 0.75; return })
+            }
+        }
+    }
+    
+    // this is used just when a tap is placed on the label to dismiss the edit menu.
+    @IBAction func tapGestureRecognizer(sender: UITapGestureRecognizer)
+    {
+        // lose the menu
+        UIMenuController.sharedMenuController().setMenuVisible(false, animated: true)
+        // reset the view color
+        UIView.animateWithDuration(0.5, animations: { self.display.alpha = 1; return })
+        // reset input status after edit (because a cut resets number to zero ending input)
+        userIsInTheMiddleOfTypingANumber = display.wasCut
+    }
+    
     /**
     initialize on startup
     */
@@ -48,59 +84,52 @@ class CalculatorViewController: UIViewController, SettingsTableViewControllerDel
         displayNumberFormatter.numberStyle = .DecimalStyle
         displayNumberFormatter.usesGroupingSeparator = false
         displayNumberFormatter.maximumFractionDigits = Int(settings.displayPrecision)
+        // adjust font size to fit on the display
         display.adjustsFontSizeToFitWidth = true
         // load some user defaults
         brain.displayPrecision = Int(settings.historyPrecision)
+        
+        // set up the label for copy/paste
+        display.userInteractionEnabled = true
     }
     
     override func viewWillLayoutSubviews() {
         // make sure the status bar is still visible (iOS 8 started shutting it off in landscape mode)
-//        UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: UIStatusBarAnimation.None)
         UIApplication.sharedApplication().statusBarHidden = false
     }
     
     override func viewDidLayoutSubviews() {
+        // this is where the 3D effect is updated
         set3DLayout(settings.buttonEffect)
     }
     
     private func set3DLayout(effect: Bool) {
-        if effect {
-            // spice up the buttons a little bit
-            for view in self.view.subviews as! [UIView] {
-                if let btn = view as? UIButton {
-                    if btn.tag != 9 {
+        // spice up the buttons a little bit
+        for view in self.view.subviews as! [UIView] {
+            if let btn = view as? UIButton {
+                if btn.buttonType != UIButtonType.InfoLight { // don't bother with the settings button
                     if let layer = btn.layer as CALayer? {
                         btn.layer.borderColor = UIColor.blackColor().CGColor
                         btn.layer.borderWidth = 1
                         btn.layer.cornerRadius = 5
                         btn.layer.masksToBounds = false
-                        btn.layer.shadowColor = UIColor.blackColor().CGColor
-                        btn.layer.shadowOffset = CGSizeMake(2, 2)
-                        btn.layer.shadowRadius = 5
-                        btn.layer.shadowOpacity = 0.5
-//                        btn.layer.shadowPath = UIBezierPath(roundedRect: btn.bounds, cornerRadius: btn.layer.cornerRadius).CGPath
+                        if effect {
+                            // turn on the 3D effect
+                            btn.layer.shadowColor = UIColor.blackColor().CGColor
+                            btn.layer.shadowOffset = CGSizeMake(2, 2)
+                            btn.layer.shadowRadius = 5
+                            btn.layer.shadowOpacity = 0.5
+                            // this didn't work right
+//                            btn.layer.shadowPath = UIBezierPath(roundedRect: btn.bounds, cornerRadius: btn.layer.cornerRadius).CGPath
+                        } else {
+                            // turn off the effect
+                            btn.layer.shadowOffset = CGSizeMake(0, 0)
+                            btn.layer.shadowRadius = 0
+                            btn.layer.shadowOpacity = 0
+                        }
+                        // resterizing each button preserves it's visual state so it's less cpu intensive
                         btn.layer.shouldRasterize = true
                         btn.layer.rasterizationScale = UIScreen.mainScreen().scale
-                    }
-                    }
-                }
-            }
-        } else {
-            // turn off 3D effect on buttons
-            for view in self.view.subviews as! [UIView] {
-                if let btn = view as? UIButton {
-                    if btn.tag != 9 {
-                    if let layer = btn.layer as CALayer? {
-                        btn.layer.borderColor = UIColor.blackColor().CGColor
-                        btn.layer.borderWidth = 1
-                        btn.layer.cornerRadius = 5
-                        btn.layer.masksToBounds = false
-                        btn.layer.shadowOffset = CGSizeMake(0, 0)
-                        btn.layer.shadowRadius = 0
-                        btn.layer.shadowOpacity = 0
-                        btn.layer.shouldRasterize = true
-                        btn.layer.rasterizationScale = UIScreen.mainScreen().scale
-                    }
                     }
                 }
             }
@@ -166,7 +195,7 @@ class CalculatorViewController: UIViewController, SettingsTableViewControllerDel
         // project #2, hint #10 done in 3 lines of code
         // save the displayed value to the variable (from the button title)
         if let value = displayValue {
-            brain.variableValues["\(first(sender.currentTitle!)!)"] = value
+            brain.variableValues["\(last(sender.currentTitle!)!)"] = value
             displayValue = brain.evaluate()
             userIsInTheMiddleOfTypingANumber = false
         } else { blinkDisplay() }
@@ -246,7 +275,10 @@ class CalculatorViewController: UIViewController, SettingsTableViewControllerDel
                 display.text = displayNumberFormatter.stringFromNumber(newValue!)
             } else {
                 if let result = brain.evaluateAndReportErrors() as? String {
+                    // display the error message
                     display.text = result
+                    // provide a visual cue of the error
+                    blinkDisplay()
                 } else {
                     display.text = "0"
                 }
@@ -261,19 +293,20 @@ class CalculatorViewController: UIViewController, SettingsTableViewControllerDel
     */
     func blinkDisplay()
     {
-        UIView.animateWithDuration(0.1, animations: {
-            self.display.alpha = 0.5
-            self.history.alpha = 0.5
-            }, completion: {
-                (finished: Bool) -> Void in
+        UIView.animateWithDuration(0.1,
+            animations: {
+                self.display.alpha = 0.5
+                self.history.alpha = 0.5
+            }, completion: {(finished: Bool) -> Void in
                 // Fade back
-                UIView.animateWithDuration(0.1, animations: {
-                    self.display.alpha = 1.0
-                    self.history.alpha = 1.0
+                UIView.animateWithDuration(0.1,
+                    animations: {
+                        self.display.alpha = 1.0
+                        self.history.alpha = 1.0
                     }, completion: nil)
         })
     }
-    
+  
     /*
     get the data back from the settings screen
     */
@@ -300,7 +333,9 @@ class CalculatorViewController: UIViewController, SettingsTableViewControllerDel
         
         if let gvc = destination as? GraphViewController {
             if let identifier = segue.identifier {
-                gvc.lastValue = brain.variableValues["m"]
+                // save the last value on the stack
+                gvc.lastValue = brain.variableValues["x"]
+                // pass the brain
                 gvc.brain = self.brain
                 switch identifier {
                     case "show graph":
@@ -312,8 +347,10 @@ class CalculatorViewController: UIViewController, SettingsTableViewControllerDel
                 }
             }
         }
+        // prepare the settings view controller
         if let svc = destination as? SettingsTableViewController {
             if let identifier = segue.identifier {
+                // pass the data object
                 svc.settings = self.settings
                 svc.delegate = self
             }
@@ -321,4 +358,3 @@ class CalculatorViewController: UIViewController, SettingsTableViewControllerDel
     }
     
 }
-
