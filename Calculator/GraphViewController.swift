@@ -87,6 +87,8 @@ class GraphViewController: UIViewController, GraphViewDataSource, UIPopoverPrese
         }
     }
     
+    // MARK: Gestures
+    
     func zoom(gesture: UIPinchGestureRecognizer) {
         graphView.zoom(gesture)
         if gesture.state == .Ended {
@@ -112,13 +114,10 @@ class GraphViewController: UIViewController, GraphViewDataSource, UIPopoverPrese
         }
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        // set the original value passed to the graph
-        brain?.variableValues["m"] = lastValue
-    }
+    // MARK: statistics
     
     internal func y(x: CGFloat) -> CGFloat? {
-        brain?.variableValues["m"] = Double(x)
+        brain?.variableValues["x"] = Double(x)
         if let y = brain?.evaluate() {
             if let minValue = statistics["min"] {
                 statistics["min"] = min(minValue, y)
@@ -159,6 +158,13 @@ class GraphViewController: UIViewController, GraphViewDataSource, UIPopoverPrese
                 statistics["avgNum"] = nil
             }
         }
+    }
+    
+    // MARK: View related
+    
+    override func viewWillDisappear(animated: Bool) {
+        // set the original value passed to the graph
+        brain?.variableValues["x"] = lastValue
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

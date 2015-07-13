@@ -37,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        // delay the splash screen briefly
+        NSThread.sleepForTimeInterval(1.5)
         return true
     }
 

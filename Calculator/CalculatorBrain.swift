@@ -72,7 +72,7 @@ class CalculatorBrain {
         learnOp(Op.UnaryOperation("tan", tan, nil))
         learnOp(Op.UnaryOperation("±", { -$0 }, nil))
         learnOp(Op.NullaryOperation("π", { M_PI }))
-        learnOp(Op.NullaryOperation("ℇ", { M_E }))
+        learnOp(Op.NullaryOperation("ℯ", { M_E }))
         
         numberFormatter.numberStyle = .DecimalStyle
         numberFormatter.usesGroupingSeparator = false

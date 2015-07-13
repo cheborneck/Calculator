@@ -48,6 +48,11 @@ class SettingsTableViewController: UITableViewController {
         buttonClick.on = settings.keyAlert
     }
     
+//    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+//        let objects = NSBundle.mainBundle().loadNibNamed("LaunchScreen", owner: self, options: nil)
+//        let view = objects[0] as! UIView
+//    }
+    
     override func preferredInterfaceOrientationForPresentation() -> UIInterfaceOrientation {
         return UIInterfaceOrientation.Portrait
     }
