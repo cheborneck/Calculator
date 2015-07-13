@@ -13,6 +13,8 @@
 		90AC12891B1C75670006627E /* AxesDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AC12881B1C75670006627E /* AxesDrawer.swift */; };
 		90AC128B1B1C79D20006627E /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AC128A1B1C79D20006627E /* GraphViewController.swift */; };
 		90AC128D1B1C82520006627E /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AC128C1B1C82520006627E /* GraphView.swift */; };
+		90CFDBE31B53657700CC9A12 /* CGUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CFDBE21B53657700CC9A12 /* CGUtilities.swift */; };
+		90CFDBE51B53658000CC9A12 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CFDBE41B53658000CC9A12 /* GradientButton.swift */; };
 		90DEFDFD1B48A3A000FF5180 /* PasteboardLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DEFDFC1B48A3A000FF5180 /* PasteboardLabel.swift */; };
 		90F860C31B3D680A0065EADD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F860C21B3D680A0065EADD /* Settings.swift */; };
 		90F860C91B3ECF1D0065EADD /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F860C81B3ECF1D0065EADD /* AboutViewController.swift */; };
@@ -43,6 +45,8 @@
 		90AC12881B1C75670006627E /* AxesDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesDrawer.swift; sourceTree = "<group>"; };
 		90AC128A1B1C79D20006627E /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		90AC128C1B1C82520006627E /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		90CFDBE21B53657700CC9A12 /* CGUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGUtilities.swift; sourceTree = "<group>"; };
+		90CFDBE41B53658000CC9A12 /* GradientButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		90DEFDFC1B48A3A000FF5180 /* PasteboardLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardLabel.swift; sourceTree = "<group>"; };
 		90F860C21B3D680A0065EADD /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		90F860C81B3ECF1D0065EADD /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 		90FF1B581B193C5100D41FE8 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				90CFDBE41B53658000CC9A12 /* GradientButton.swift */,
+				90CFDBE21B53657700CC9A12 /* CGUtilities.swift */,
 				90AC12881B1C75670006627E /* AxesDrawer.swift */,
 				90FF1B7B1B195B9900D41FE8 /* CalculatorBrain.swift */,
 				90FF1B5D1B193C5100D41FE8 /* CalculatorViewController.swift */,
@@ -260,9 +266,11 @@
 				90AC12891B1C75670006627E /* AxesDrawer.swift in Sources */,
 				90FF1B5E1B193C5100D41FE8 /* CalculatorViewController.swift in Sources */,
 				90F860C31B3D680A0065EADD /* Settings.swift in Sources */,
+				90CFDBE51B53658000CC9A12 /* GradientButton.swift in Sources */,
 				90F920281B30D97800B89C06 /* StatsViewController.swift in Sources */,
 				906DD4F61B3AABB100E3D8C9 /* SettingsTableViewController.swift in Sources */,
 				90FF1B5C1B193C5100D41FE8 /* AppDelegate.swift in Sources */,
+				90CFDBE31B53657700CC9A12 /* CGUtilities.swift in Sources */,
 				90F9202A1B315F6400B89C06 /* GlobalSplitViewController.swift in Sources */,
 				90AC128D1B1C82520006627E /* GraphView.swift in Sources */,
 			);
@@ -400,7 +408,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -414,7 +422,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Stanford CS193P Calculator-->
+        <!--Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="RPN_Graph_Calculator" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Calculator" customClass="CalculatorViewController" customModule="RPN_Graph_Calculator" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -60,16 +60,26 @@
                                     <outletCollection property="gestureRecognizers" destination="x7a-Wy-cIe" appends="YES" id="FdG-Ty-mTt"/>
                                 </connections>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nb8-dB-0Qx">
+                            <button opaque="NO" contentMode="redraw" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nb8-dB-0Qx" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="2" y="146" width="147.5" height="88.5"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="-1" height="-1"/>
                                 <state key="normal" title="CA">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
-                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
                                     <rect key="frame" x="2" y="137" width="63.5" height="50.5"/>
@@ -79,14 +89,24 @@
                                     <action selector="clearAll" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xp7-md-p1a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9C2-Td-RPo">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9C2-Td-RPo" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="151" y="146" width="148" height="88.5"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="-1" height="-1"/>
                                 <state key="normal" title="C">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -98,14 +118,24 @@
                                     <action selector="clearEntry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IAy-Gs-Wpz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exT-Hu-hTD">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exT-Hu-hTD" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="301.5" y="146.5" width="147.5" height="88.5"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="-1" height="-1"/>
                                 <state key="normal" title="⌫">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -114,14 +144,24 @@
                                     <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nr5-iv-RQt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rna-UE-siJ">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rna-UE-siJ" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="450.5" y="146" width="147.5" height="88.5"/>
-                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="÷">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.80803066492080688" green="0.80731815099716187" blue="0.82922857999801636" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.75328236818313599" green="0.75325977802276611" blue="0.75327259302139282" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -133,14 +173,24 @@
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xsf-1p-7pt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rm6-04-zLh">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rm6-04-zLh" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="451" y="145" width="147" height="89"/>
-                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="±">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.80803066492080688" green="0.80731815099716187" blue="0.82922857999801636" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.75328236818313599" green="0.75325977802276611" blue="0.75327259302139282" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -149,14 +199,24 @@
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iqL-58-Cqe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eai-6b-UcI">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eai-6b-UcI" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="451" y="145" width="147" height="89"/>
-                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="ℯ">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.80803066492080688" green="0.80731815099716187" blue="0.82922857999801636" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.75328236818313599" green="0.75325977802276611" blue="0.75327259302139282" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -165,14 +225,24 @@
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q3W-S5-fff"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WV7-Bg-WTh">
+                            <button opaque="NO" contentMode="redraw" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WV7-Bg-WTh" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="2" y="237" width="147.5" height="88.5"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="7">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -187,14 +257,24 @@
                                     <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YBw-1L-PPl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBa-ph-qgt">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBa-ph-qgt" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="152" y="237" width="147.5" height="89"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="8">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -209,14 +289,24 @@
                                     <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zt3-uZ-Dp0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hl-SU-kRd">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hl-SU-kRd" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="301.5" y="237" width="147.5" height="88.5"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="9">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -228,14 +318,24 @@
                                     <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Lb-6u-PG9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTh-rZ-ZE5">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTh-rZ-ZE5" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="450.5" y="237" width="147.5" height="89"/>
-                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="×">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.80803066492080688" green="0.80731815099716187" blue="0.82922857999801636" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.75328236818313599" green="0.75325977802276611" blue="0.75327259302139282" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -250,14 +350,24 @@
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1cM-cm-FTe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vd-Ti-jct">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vd-Ti-jct" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="451" y="145" width="147" height="89"/>
-                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="sin">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.80803066492080688" green="0.80731815099716187" blue="0.82922857999801636" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.75328236818313599" green="0.75325977802276611" blue="0.75327259302139282" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -266,14 +376,24 @@
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tlH-IG-N2v"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIf-pd-W47">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIf-pd-W47" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="451" y="145" width="147" height="89"/>
-                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="π">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.80803066492080688" green="0.80731815099716187" blue="0.82922857999801636" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.75328236818313599" green="0.75325977802276611" blue="0.75327259302139282" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -282,16 +402,27 @@
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QSX-dP-lay"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQy-4D-FIQ">
+                            <button opaque="NO" contentMode="redraw" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQy-4D-FIQ" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="2" y="327.5" width="148" height="89"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="4">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=compact">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=compact" misplaced="YES">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <rect key="frame" x="2" y="216.5" width="99.5" height="59"/>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="2" y="241" width="64.5" height="51"/>
@@ -307,14 +438,24 @@
                                     <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3QL-rv-v5T"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnV-Y0-80B">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnV-Y0-80B" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="152" y="328" width="147.5" height="88.5"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="5">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -332,14 +473,24 @@
                                     <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Asy-qc-wZ5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaE-wO-ZgC">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaE-wO-ZgC" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="301.5" y="327.5" width="147.5" height="89"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="6">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -354,14 +505,24 @@
                                     <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wie-Zv-n6v"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJy-l6-UuM">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJy-l6-UuM" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="450" y="328.5" width="147.5" height="88.5"/>
-                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="−">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.80803066492080688" green="0.80731815099716187" blue="0.82922857999801636" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.75328236818313599" green="0.75325977802276611" blue="0.75327259302139282" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -379,14 +540,24 @@
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ksb-Bc-c1d"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akm-j5-Wj9">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akm-j5-Wj9" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="451" y="145" width="147" height="89"/>
-                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="cos">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.80803066492080688" green="0.80731815099716187" blue="0.82922857999801636" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.75328236818313599" green="0.75325977802276611" blue="0.75327259302139282" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -398,18 +569,31 @@
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zw8-k9-RDz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="97.5" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zL-we-5Nj" userLabel="graph">
+                            <button opaque="NO" contentMode="redraw" placeholderIntrinsicWidth="97.5" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zL-we-5Nj" userLabel="graph" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="451" y="145" width="147" height="89"/>
-                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" image="graph">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.80803066492080688" green="0.80731815099716187" blue="0.82922857999801636" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <state key="highlighted" image="graph-highlighted"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.75328236818313599" green="0.75325977802276611" blue="0.75327259302139282" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                </variation>
                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="334" y="241" width="64" height="51"/>
                                 </variation>
@@ -418,16 +602,27 @@
                                     <segue destination="SGX-hz-eEj" kind="showDetail" identifier="show graph" id="h3c-2b-Htg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6g-iX-pmx">
+                            <button opaque="NO" contentMode="redraw" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6g-iX-pmx" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="2" y="418" width="147.5" height="88.5"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="1">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=compact">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=compact" misplaced="YES">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <rect key="frame" x="2" y="277.5" width="98" height="59.5"/>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="2" y="294" width="64.5" height="51"/>
@@ -440,14 +635,24 @@
                                     <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qhg-X9-8b1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dA2-ee-JYs">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dA2-ee-JYs" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="151" y="418" width="148" height="89"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="2">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -462,14 +667,24 @@
                                     <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dic-EV-mak"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhT-bw-4J9">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhT-bw-4J9" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="301" y="418" width="147.5" height="88.5"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="3">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -481,14 +696,24 @@
                                     <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BUs-Pe-Stx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNy-ob-3Of">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNy-ob-3Of" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="450.5" y="418" width="147.5" height="89"/>
-                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.80803066492080688" green="0.80731815099716187" blue="0.82922857999801636" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.75328236818313599" green="0.75325977802276611" blue="0.75327259302139282" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -506,14 +731,24 @@
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V5Z-mE-DY1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpf-Fi-tDC">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpf-Fi-tDC" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="451" y="145" width="147" height="89"/>
-                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="tan">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.80803066492080688" green="0.80731815099716187" blue="0.82922857999801636" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.75328236818313599" green="0.75325977802276611" blue="0.75327259302139282" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -525,15 +760,25 @@
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mgD-1C-NGC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH2-rw-ZfG">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH2-rw-ZfG" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="451" y="145" width="147" height="89"/>
-                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="x">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.80803066492080688" green="0.80731815099716187" blue="0.82922857999801636" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.75328236818313599" green="0.75325977802276611" blue="0.75327259302139282" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -545,13 +790,24 @@
                                     <action selector="pushVariable:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nC0-5G-TvN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCu-0o-QCZ">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCu-0o-QCZ" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="2" y="509" width="297.5" height="88.5"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="0">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -563,14 +819,24 @@
                                     <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PGa-dh-t6C"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhu-vo-LyD">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhu-vo-LyD" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="301" y="509" width="147.5" height="88.5"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title=".">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -582,14 +848,24 @@
                                     <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w2j-97-via"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2b-iL-Q0t">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2b-iL-Q0t" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="450.5" y="509" width="147.5" height="88.5"/>
-                                <color key="backgroundColor" red="1" green="0.45101843559999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="⏎">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.99315613508224487" green="0.67069000005722046" blue="0.43037527799606323" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="1" green="0.45101843559999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -601,14 +877,24 @@
                                     <action selector="enter" destination="BYZ-38-t0r" eventType="touchUpInside" id="emX-vg-Idt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUn-yR-8QM">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUn-yR-8QM" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="451" y="145" width="147" height="89"/>
-                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="sqrt">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.80803066492080688" green="0.80731815099716187" blue="0.82922857999801636" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.75328236818313599" green="0.75325977802276611" blue="0.75327259302139282" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -617,14 +903,24 @@
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kfk-vb-ABW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awR-NN-PQa">
+                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awR-NN-PQa" customClass="GradientButton" customModule="RPN_Graph_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="451" y="145" width="147" height="89"/>
-                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="⇾x">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.80803066492080688" green="0.80731815099716187" blue="0.82922857999801636" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="contextColor">
+                                        <color key="value" red="0.75328236818313599" green="0.75325977802276611" blue="0.75327259302139282" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bevel" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 </variation>
@@ -1314,7 +1610,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Stanford CS193P Calculator" id="KgD-SV-gHV"/>
+                    <navigationItem key="navigationItem" title="Calculator" id="KgD-SV-gHV" userLabel="Calculator"/>
                     <connections>
                         <outlet property="decimalButton" destination="xhu-vo-LyD" id="E2d-SR-O51"/>
                         <outlet property="display" destination="j0O-BA-wP0" id="PUi-90-TMg"/>
@@ -1364,7 +1660,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vuD-gC-5Nv" id="vw5-Pb-Fvx">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMS-3i-NuR">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMS-3i-NuR">
                                                     <rect key="frame" x="543" y="6" width="51" height="31"/>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3D Buttons" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqQ-N7-SUC">
